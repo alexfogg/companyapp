@@ -1,0 +1,16 @@
+<%= simple_form_for @company, :html => { :class => 'form-horizontal' } do |f| %>
+    <%= f.input :name %>
+    <%= f.input :location %>
+    <%= f.input :size, collection: ['1-10', '11-50', '51-250', '250+']%>
+    <%= f.input :hiring, collection: ['Active', 'Passive', 'N/A']  %>
+    <%= f.input :industry %>
+    <%= f.input :companytype, collection: ['Established Company', 'Startup', 'Creative Agency', 'Development Shop', 'Gov/Nonprofit/Educaiton', 'Other']%>
+    <%= f.input :link, :as => :string %>
+    <%= f.input :image, :as => :string %>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                companies_path, :class => 'btn' %>
+  </div>
+<% end %>
