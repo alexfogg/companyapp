@@ -1,13 +1,9 @@
 class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
+  before_filter :authenticate_user!
   def index
-    @companies = Company.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @companies }
-    end
+    @companies = Company.order
   end
 
   # GET /companies/1
@@ -79,5 +75,15 @@ class CompaniesController < ApplicationController
       format.html { redirect_to companies_url }
       format.json { head :no_content }
     end
+  end
+
+   private
+
+  def sort_column
+    Company.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end

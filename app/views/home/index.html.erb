@@ -1,0 +1,40 @@
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Who's hiring?</h1>
+        <p>CompanyApp is a service where students can share their job hunt information and help each other get hired.</p>
+        <% if user_signed_in? %>
+
+        <p class="btn btn-primary btn-large"><%= link_to('Get Started', companies_path) %></p>
+        <% else %>
+        <p class="btn btn-primary btn-large"><%= link_to "Get Started", new_user_registration_path %> </p>
+        <% end %>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <h2>Add Those Leads!</h2>
+          <p>Found a company that is hiring Ruby develoeprs? Add it to the list! Share your leads with your peers and help everyone find a job. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Keep 'em Updated</h2>
+          <p>See something that isn't right? Fix it! Crowd-sourced moderation allows you to instantly edit, delete, and add information to a listing. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Talk about it!</h2>
+          <p>Know an insider? Been on an interview there? Have a hot tip? Comment on the listing and help each other out!</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Alex Fogg 2013</p>
+      </footer>
+
+    </div>

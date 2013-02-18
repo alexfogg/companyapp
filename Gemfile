@@ -5,6 +5,7 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'disqus'
+gem 'devise'
 
 group :assets do
 gem 'sass-rails',   '~> 3.2.3'

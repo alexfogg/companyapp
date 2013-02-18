@@ -4,9 +4,9 @@
     <%= f.input :size, collection: ['1-10', '11-50', '51-250', '250+']%>
     <%= f.input :hiring, collection: ['Active', 'Passive', 'N/A']  %>
     <%= f.input :industry %>
-    <%= f.input :companytype, collection: ['Established Company', 'Startup', 'Creative Agency', 'Development Shop', 'Gov/Nonprofit/Educaiton', 'Other']%>
+    <%= f.input :companytype, label: 'Company Type', collection: ['Established Company', 'Startup', 'Creative Agency', 'Development Shop', 'Gov/Nonprofit/Educaiton', 'Other']%>
     <%= f.input :link, :as => :string %>
-    <%= f.input :image, :as => :string %>
+    <%= f.input :image, label: "Image URL", :as => :string %>
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
