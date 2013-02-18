@@ -55,6 +55,8 @@ GEM
     debugger-linecache (1.1.2)
       debugger-ruby_core_source (>= 1.1.1)
     debugger-ruby_core_source (1.1.8)
+    disqus (1.0.4)
+      json
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -164,6 +166,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 3.2.1)
+  disqus
   jquery-rails
   less-rails
   meta_request
