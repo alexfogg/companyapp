@@ -6,9 +6,9 @@
         <p>CompanyApp is a service where students can share their job hunt information and help each other get hired.</p>
         <% if user_signed_in? %>
 
-        <p class="btn btn-primary btn-large"><%= link_to('Get Started', companies_path) %></p>
+        <p><%= link_to('Get Started', companies_path, :class => "btn btn-primary btn-large") %></p>
         <% else %>
-        <p class="btn btn-primary btn-large"><%= link_to "Get Started", new_user_registration_path %> </p>
+        <p><%= link_to('Get Started', new_user_registration_path, :class => "btn btn-primary btn-large") %> </p>
         <% end %>
       </div>
 
